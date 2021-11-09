@@ -1,1 +1,17 @@
-<body>Hello</body>
+<html>
+<head>
+	<script>
+		function load_file() {
+		  fetch('file:///data.txt')
+		    .then(response => response.text())
+		    .then(data => {
+		    	lines = data.split('\n');
+		    	console.log(data);
+		    });
+		}
+	</script>
+</head>
+<body onload="load_file()">Hello</body>
+
+
+</html>
